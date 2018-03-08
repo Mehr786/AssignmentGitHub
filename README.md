@@ -297,3 +297,43 @@ Your branch is up-to-date with 'origin/master'.
 
 nothing to commit, working tree clean
 MEHRBANOs-MBP:lessons_learned mehrbanosyed$ 
+MEHRBANOs-MBP:lessons_learned mehrbanosyed$ git checkout -b "favorite_food"
+Switched to a new branch 'favorite_food'
+MEHRBANOs-MBP:lessons_learned mehrbanosyed$ ls
+README.md
+MEHRBANOs-MBP:lessons_learned mehrbanosyed$ git add favorite_foods.md
+fatal: pathspec 'favorite_foods.md' did not match any files
+
+MEHRBANOs-MBP:lessons_learned mehrbanosyed$ git add "favorite_foods.md"
+fatal: pathspec 'favorite_foods.md' did not match any files
+MEHRBANOs-MBP:lessons_learned mehrbanosyed$ ls
+README.md
+MEHRBANOs-MBP:lessons_learned mehrbanosyed$ pwd
+/Users/mehrbanosyed/lessons_learned
+MEHRBANOs-MBP:lessons_learned mehrbanosyed$ ls
+README.md
+MEHRBANOs-MBP:lessons_learned mehrbanosyed$ ls
+README.md
+MEHRBANOs-MBP:lessons_learned mehrbanosyed$ touch favorite_foods.md
+MEHRBANOs-MBP:lessons_learned mehrbanosyed$ ls
+README.md		favorite_foods.md
+MEHRBANOs-MBP:lessons_learned mehrbanosyed$ git add "favorite_foods.md"
+MEHRBANOs-MBP:lessons_learned mehrbanosyed$ git commit -m "ffassingment"
+[favorite_food 27edda7] ffassingment
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 favorite_foods.md
+MEHRBANOs-MBP:lessons_learned mehrbanosyed$ git push origin "favorite_foods"
+error: src refspec favorite_foods does not match any.
+error: failed to push some refs to 'https://github.com/Mehr786/Lesson-Learned'
+MEHRBANOs-MBP:lessons_learned mehrbanosyed$ git push origin "favorite_foods.md"
+error: src refspec favorite_foods.md does not match any.
+error: failed to push some refs to 'https://github.com/Mehr786/Lesson-Learned'
+MEHRBANOs-MBP:lessons_learned mehrbanosyed$ git push origin "favorite_food"
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 288 bytes | 288.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Mehr786/Lesson-Learned
+ * [new branch]      favorite_food -> favorite_food
+MEHRBANOs-MBP:lessons_learned mehrbanosyed$ 
